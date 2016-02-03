@@ -14,9 +14,15 @@ version 12 //to indicate which version of stata has been used
 
 set more off // to run without pressing more options - runs automatically
 
+//opening file for stata 14 
+use "http://sites.google.com/a/scarletmail.rutgers.edu/shourjyadatamanagement/first-assignment/20520-0001-Data.dta?attredirects=0&d=1"
+
 //opening the .dta file from the file option
+//making this a part of comments since am using stata 12
+/*
 use "D:\stata code and datasets\data 2\ICPSR_20520\ICPSR_20520\DS0001\20520-0001-Data.dta", clear
 (Children of Immigrants Longitudinal Study (CILS), 1991-2006)
+*/ 
 
 // demonstration of how to use a log file
 cap log close // to ensure that errors are fixe and prod doesn't stop working due to the error
@@ -31,17 +37,27 @@ log close // closes the log file
 // point 1 completed, data set found
 edit //data set opens up on stata on a different window
 // point 2 completed
+
 //opening file again 
+//putting this part under comments to avoid errors in stata 14
+/*
 use "D:\stata code and datasets\data 2\ICPSR_20520\ICPSR_20520\DS0001\20520-0001-Data.dta", clear
 (Children of Immigrants Longitudinal Study (CILS), 1991-2006)
-//saving the file 
+*/
 
+//opening file in stata 14
+use "http://sites.google.com/a/scarletmail.rutgers.edu/shourjyadatamanagement/first-assignment/20520-0001-Data.dta?attredirects=0&d=1"
+
+///saving the file 
 save "D:\stata code and datasets\data 2\ICPSR_20520\ICPSR_20520\DS0001\datman1-1.dta"
-file D:\stata code and datasets\data 2\ICPSR_20520\ICPSR_20520\DS0001\datman1-1.dta saved
 
 // reopening the file
-use "D:\stata code and datasets\data 2\ICPSR_20520\ICPSR_20520\DS0001\datman1-1.dta", clear
-(Children of Immigrants Longitudinal Study (CILS), 1991-2006)
+// making this a comment to avoid error in stata 14
+/*use "D:\stata code and datasets\data 2\ICPSR_20520\ICPSR_20520\DS0001\datman1-1.dta", clear
+(Children of Immigrants Longitudinal Study (CILS), 1991-2006)*/ 
+
+// reopening file in stata 14
+use "http://sites.google.com/a/scarletmail.rutgers.edu/shourjyadatamanagement/first-assignment/20520-0001-Data.dta?attredirects=0&d=1"
 
 // lists out variables
 list
