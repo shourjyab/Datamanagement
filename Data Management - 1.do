@@ -15,57 +15,57 @@ version 12 //to indicate which version of stata has been used
 set more off // to run without pressing more options - runs automatically
 
 //opening the .dta file from the file option
-. use "D:\stata code and datasets\data 2\ICPSR_20520\ICPSR_20520\DS0001\20520-0001-Data.dta", clear
+use "D:\stata code and datasets\data 2\ICPSR_20520\ICPSR_20520\DS0001\20520-0001-Data.dta", clear
 (Children of Immigrants Longitudinal Study (CILS), 1991-2006)
 
 // demonstration of how to use a log file
-. cap log close // to ensure that errors are fixeand prod doesn't stop working due to the error
-. set type logtext // sets text format for logfile
-. log using "logfilefordatman1.txt", text append
+cap log close // to ensure that errors are fixe and prod doesn't stop working due to the error
+set type logtext // sets text format for logfile
+log using "logfilefordatman1.txt", text append
 
 // now I can do whatever function - for ex I run the sum command
-. sum // gives descriptive statistics for all the variables - point 4 completed
-. log close // closes the log file 
+sum // gives descriptive statistics for all the variables - point 4 completed
+log close // closes the log file 
 
 // the summary of stats will be saved in the logfile, saved in documents
 // point 1 completed, data set found
-. edit //data set opens up on stata on a different window
+edit //data set opens up on stata on a different window
 // point 2 completed
 //opening file again 
-. use "D:\stata code and datasets\data 2\ICPSR_20520\ICPSR_20520\DS0001\20520-0001-Data.dta", clear
+use "D:\stata code and datasets\data 2\ICPSR_20520\ICPSR_20520\DS0001\20520-0001-Data.dta", clear
 (Children of Immigrants Longitudinal Study (CILS), 1991-2006)
 //saving the file 
 
-. save "D:\stata code and datasets\data 2\ICPSR_20520\ICPSR_20520\DS0001\datman1-1.dta"
+save "D:\stata code and datasets\data 2\ICPSR_20520\ICPSR_20520\DS0001\datman1-1.dta"
 file D:\stata code and datasets\data 2\ICPSR_20520\ICPSR_20520\DS0001\datman1-1.dta saved
 
 // reopening the file
-. use "D:\stata code and datasets\data 2\ICPSR_20520\ICPSR_20520\DS0001\datman1-1.dta", clear
+use "D:\stata code and datasets\data 2\ICPSR_20520\ICPSR_20520\DS0001\datman1-1.dta", clear
 (Children of Immigrants Longitudinal Study (CILS), 1991-2006)
 
 // lists out variables
-. list
+list
 
 
 //tab file format
 // Not sure about the explanations of the commands 
 /*the outsheet command is used to open a file called the datmantab1 */
-. outsheet using datman1tab 
+outsheet using datman1tab 
 /* the type command produces file datman1tab which is tab separated */
 /* the .out after the filename indicates that file is in tab separate format */ 
-. type datman1tab.out
+type datman1tab.out
 
 
 // comma file format . csv
 /* outsheet opens the file called datman2.csv */
 //by adding comma function we can save it as comma separated file
-. outsheet using datman2.csv, comma
-. type datman2.csv
+outsheet using datman2.csv, comma
+type datman2.csv
 
 //space separated file
 //.raw file is for data to be separated by space  
-. outfile using datman1.raw
-. type datman1.raw
+outfile using datman1.raw
+type datman1.raw
 
 //point 3 completed
 
