@@ -33,6 +33,9 @@ log using "logfilefordatman1.txt", text append
 sum // gives descriptive statistics for all the variables - point 4 completed
 log close // closes the log file 
 
+
+// AKB - Looks good
+
 // the summary of stats will be saved in the logfile, saved in documents
 // point 1 completed, data set found
 edit //data set opens up on stata on a different window
@@ -65,6 +68,9 @@ list
 
 //tab file format
 // Not sure about the explanations of the commands 
+
+// AKB: I think this should work for the explanations part - Professor to confirm
+
 /*the outsheet command is used to open a file called the datmantab1 */
 outsheet using datman1tab 
 /* the type command produces file datman1tab which is tab separated */
@@ -85,7 +91,7 @@ type datman1.raw
 
 //point 3 completed
 
-
+// AKB: I usually like saving in the .txt format as well
 
  
 
