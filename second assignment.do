@@ -21,13 +21,13 @@ set more off // to run without pressing more options - runs automatically
 
 *************************************append and labelling*************************************
 
-use "https://sites.google.com/a/scarletmail.rutgers.edu/shourjyadatamanagement/2nd-assignment-d1/argentina%20middle%20class.dta?attredirect> s=0&d=1"
+use "https://sites.google.com/a/scarletmail.rutgers.edu/shourjyadatamanagement/2nd-assignment-d1/argentina%20middle%20class.dta?attredirects=0&d=1"
 
 save argentinamiddleclass, replace
 
 clear
 
-use "https://sites.google.com/a/scarletmail.rutgers.edu/shourjyadatamanagement/2nd-assignment-d1/bolivia%20middle%20class.dta?attredirects=> 0&d=1"
+use "https://sites.google.com/a/scarletmail.rutgers.edu/shourjyadatamanagement/2nd-assignment-d1/bolivia%20middle%20class.dta?attredirects=0&d=1"
 
 save boliviamiddleclass, replace
 
