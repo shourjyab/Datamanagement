@@ -30,59 +30,99 @@ cd  `worDir'
 
 //the commands below give direct access to dataset
 
-wbopendata, language(en - English) country() topics() indicator(NY.GDP.MKTP.KD.ZG - GDP GROWTH) long clear
+wbopendata, language(en - English) country() topics() indicator(NY.GDP.MKTP.KD.ZG - GDP GROWTH)
 
 save gdp
 
 clear
 
-wbopendata, language (en - English) country () topics () indicator (NV.MNF.CHEM.ZS.UN - Chemicals)
+wbopendata, language (en - English) country () topics () indicator (NV.MNF.CHEM.ZS.UN - Chemicals) long clear
 
 save chemicals
 
 clear
 
-wbopendata, language (en - English) country () topics () indicator (NV.MNF.FBTO.ZS.UN - Food beverages and tobacco)
+wbopendata, language (en - English) country () topics () indicator (NV.MNF.FBTO.ZS.UN - Food beverages and tobacco)long clear 
 
 save food
 
 clear
 
-wbopendata, language (en - English) country () topics () indicator (NV.MNF.MTRN.ZS.UN - Machinery and transport equipment)
+wbopendata, language (en - English) country () topics () indicator (NV.MNF.MTRN.ZS.UN - Machinery and transport equipment)long clear 
 
 save machine
 
 clear
 
-******************merging**************
-
-//four files are added gdp,chemicals,food,machine
-
-//gdp and chemicals is merged and saved as merge1
+**********shaping data to see the result clearly*****************
 
 use gdp 
 
-merge m:1 countrycode using chemicals, nogenerate
+drop countrycode iso2code region regioncode indicatorname indicatorcode
+
+save gdpworkfile
+
+clear
+
+use chemicals
+
+drop countrycode iso2code region regioncode year
+
+save chemicalsworkfile
+
+clear
+
+use food
+
+drop countrycode iso2code region regioncode year
+
+save foodworkfile
+
+clear
+
+use machine
+
+drop countrycode iso2code region regioncode year
+
+save machineworkfile
+
+clear
+
+******************merging**************
+
+//four of the saved workfiles created above will be used
+
+//gdpworkfile and chemicalsworkfile is merged and saved as merge1
+
+use gdpworkfile 
+
+merge 1:m countryname using chemicalsworkfile
+
+drop _merge
 
 save merge1
 
 clear
 
-// merge1 is merged to food, saved as merge2
+// merge1 is merged to foodworkfile, saved as merge2
 
 use merge1
 
-merge m:m countrycode using food, nogenerate
+merge m:m countryname using foodworkfile
+
+drop _merge
 
 save merge2 
 
 clear 
 
-// merge2 is merged to machine, saved in merge3
+// merge2 is merged to machineworkfile, saved in merge3
 
 use merge2
 
-merge m:m countrycode using machine, nogenerate
+merge m:m countryname using machineworkfile
+
+drop _merge
 
 save merge3
 

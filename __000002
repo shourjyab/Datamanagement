@@ -1,0 +1,12 @@
+﻿<?xml version=1.0 encoding=utf-8?>
+<wb:indicators page=1 pages=1 per_page=50 total=1 xmlns:wb=http://www.worldbank.org>
+  <wb:indicator id=NY.GDP.MKTP.KD.ZG>
+    <wb:name>GDP growth (annual %)</wb:name>
+    <wb:source id=2>World Development Indicators</wb:source>
+    <wb:sourceNote>Annual percentage growth rate of GDP at market prices based on constant local currency. Aggregates are based on constant 2005 U.S. dollars. GDP is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources.</wb:sourceNote>
+    <wb:sourceOrganization>World Bank national accounts data, and OECD National Accounts data files.</wb:sourceOrganization>
+    <wb:topics>
+      <wb:topic id=3>Economy &amp; Growth</wb:topic>
+    </wb:topics>
+  </wb:indicator>
+</wb:indicators>
