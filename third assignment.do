@@ -32,25 +32,25 @@ cd  `worDir'
 
 wbopendata, language(en - English) country() topics() indicator(NY.GDP.MKTP.KD.ZG - GDP GROWTH)
 
-save gdp
+save gdp, replace //always give replace to save
 
 clear
 
 wbopendata, language (en - English) country () topics () indicator (NV.MNF.CHEM.ZS.UN - Chemicals) long clear
 
-save chemicals
+save chemicals, replace
 
 clear
 
 wbopendata, language (en - English) country () topics () indicator (NV.MNF.FBTO.ZS.UN - Food beverages and tobacco)long clear 
 
-save food
+save food, replace
 
 clear
 
 wbopendata, language (en - English) country () topics () indicator (NV.MNF.MTRN.ZS.UN - Machinery and transport equipment)long clear 
 
-save machine
+save machine, replace
 
 clear
 
@@ -60,15 +60,15 @@ use gdp
 
 drop countrycode iso2code region regioncode indicatorname indicatorcode
 
-save gdpworkfile
+save gdpworkfile, replace
 
 clear
 
 use chemicals
 
-drop countrycode iso2code region regioncode year
+drop countrycode iso2code region regioncode year  
 
-save chemicalsworkfile
+save chemicalsworkfile, replace
 
 clear
 
@@ -76,7 +76,7 @@ use food
 
 drop countrycode iso2code region regioncode year
 
-save foodworkfile
+save foodworkfile, replace
 
 clear
 
@@ -84,7 +84,7 @@ use machine
 
 drop countrycode iso2code region regioncode year
 
-save machineworkfile
+save machineworkfile, replace
 
 clear
 
@@ -96,11 +96,11 @@ clear
 
 use gdpworkfile 
 
-merge 1:m countryname using chemicalsworkfile
+merge 1:m countryname using chemicalsworkfile  //this is fine, but for this to make sense, there should be year in using file
 
 drop _merge
 
-save merge1
+save merge1, replace
 
 clear
 
@@ -108,7 +108,8 @@ clear
 
 use merge1
 
-merge m:m countryname using foodworkfile
+merge m:m countryname using foodworkfile //like above: foodworkfile doesnt make sense there should be year retained
+//so the key is to merge on both countryname AND year !! then it is "1:1   countryname year etc etc"
 
 drop _merge
 
