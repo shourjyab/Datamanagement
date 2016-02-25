@@ -54,6 +54,12 @@ save machine, replace
 
 clear
 
+wbopendata, language(en - English) country() topics() indicator(9.0.Labor.All - Labor Force Participation Rate (%))long clear
+
+save labour, replace
+
+clear
+
 ******************shaping the data******************
 
 use gdp
@@ -88,9 +94,11 @@ save mach1, replace
 
 clear
 
+drop countrycode iso2code region regioncode
 
+save lab1, replace 
 
-
+clear
 
 ******************merging**************
 
@@ -116,7 +124,7 @@ merge 1:1 countryname year using food1
 
 drop _merge
 
-save merge2 
+save merge2, replace 
 
 clear 
 
@@ -128,10 +136,21 @@ merge 1:1 countryname year using machine
 
 drop _merge
 
-save merge3
+save merge3, replace
 
 clear
 
+// merge3 is merged with labour, saved in merge 4
+
+use merge3
+
+merge 1:1 countryname year using machine
+
+drop _merge
+
+save merge4, replace
+
+clear
 ********************done*****************
 
 
