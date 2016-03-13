@@ -1,3 +1,9 @@
+//the repo somewhat messy; filenames shouldnthave spaces;again: need more data!
+//there arent't 300 lines! but rather 150 or so!!
+//again: more data, more descriptive stats and more data exploration will add lines
+//do stop by my office and email me if questions!
+//this code is very inefficient--a lot unnecessary repetition--it could have been much more concise; it's likea as if lines are added just for a skae of adding lines
+
  //Shourjya Deb
  //Data Management Class Assignment 4 - 22nd Feb, 2015
  
