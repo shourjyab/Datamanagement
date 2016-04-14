@@ -1,0 +1,14 @@
+	(1)	(2)	(3)
+VARIABLES	voiacc	polstb	polstb
+			
+polstb	-0.0667		
+	(0.0878)		
+goef		-0.390	-0.390
+		(0.484)	(0.484)
+Constant	0.320***	-1.210***	-1.210***
+	(0.105)	(0.0557)	(0.0557)
+			
+Observations	14	14	14
+R-squared	0.046	0.051	0.051
+Standard errors in parentheses			
+*** p<0.01, ** p<0.05, * p<0.1			

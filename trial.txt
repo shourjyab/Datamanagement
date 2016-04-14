@@ -1,0 +1,681 @@
+                                                       ___  ____  ____  ____  ____(R)
+                                                      /__    /   ____/   /   ____/   
+                                                     ___/   /   /___/   /   /___/    
+                                                       Statistics/Data Analysis      
+      
+      
+        ___  ____  ____  ____  ____ (R)
+       /__    /   ____/   /   ____/
+      ___/   /   /___/   /   /___/   14.0   Copyright 1985-2015 StataCorp LP
+        Statistics/Data Analysis            StataCorp
+                                            4905 Lakeway Drive
+           Special Edition                  College Station, Texas 77845 USA
+                                            800-STATA-PC        http://www.stata.com
+                                            979-696-4600        stata@stata.com
+                                            979-696-4601 (fax)
+      
+      Unlimited-user Stata network license expires 31 Jul 2016:
+             Serial number:  501409005088
+               Licensed to:  Shourjya Deb
+                             Rutgers University
+      
+      Notes:
+            1.  Unicode is supported; see help unicode_advice.
+            2.  Maximum number of variables is set to 5000; see help set_maxvar.
+      
+     1 . doedit "D:\stata code and datasets\Datamanagement\final project.do" 
+      
+     2 . use indiadata
+      
+     3 . br
+      
+     4 . scatter voiacc polstb timeline
+      
+     5 . graph save
+      something required
+      r(100);
+      
+     6 . graphs save svpt
+      command graphs is unrecognized
+      r(199);
+      
+     7 . graph save Graph "C:\Users\DURGA\Downloads\Graph1.gph"
+      (file C:\Users\DURGA\Downloads\Graph1.gph saved)
+      
+     8 . scatter voicass timeline
+      variable voicass not found
+      r(111);
+      
+     9 . scatter voiacc timeline
+      
+    10 . graph save "C:\Users\DURGA\Downloads\Graph2.gph"
+      (file C:\Users\DURGA\Downloads\Graph2.gph saved)
+      
+    11 . scatter polstb timeline
+      
+    12 . graph save graphh3
+      (file graphh3.gph saved)
+      
+    13 . clear
+      
+    14 . use indiadata
+      
+    15 . do "C:\Users\DURGA\AppData\Local\Temp\STD03000000.tmp"
+      
+    16 . scatter voiacc polstb goef requ rol cc timeline
+      
+    17 . 
+      end of do-file
+      
+    18 . do "C:\Users\DURGA\AppData\Local\Temp\STD03000000.tmp"
+      
+    19 . save graph govONt
+      invalid 'govONt' 
+      r(198);
+      
+      end of do-file
+      
+      r(198);
+      
+    20 . do "C:\Users\DURGA\AppData\Local\Temp\STD03000000.tmp"
+      
+    21 . save graph gov-on-t
+      invalid 'gov' 
+      r(198);
+      
+      end of do-file
+      
+      r(198);
+      
+    22 . clear
+      
+    23 . use indiadata
+      
+    24 . describe
+      
+      Contains data from indiadata.dta
+        obs:            14                          
+       vars:            36                          12 Apr 2016 03:20
+       size:         2,142                          
+      ---------------------------------------------------------------------------------------------------------------------------------------------
+                    storage   display    value
+      variable name   type    format     label      variable label
+      ---------------------------------------------------------------------------------------------------------------------------------------------
+      year            str13   %13s                  
+      timeline        float   %9.0g                 
+      voiacc          float   %9.0g                 Voice and Accountability
+      polstb          float   %9.0g                 Political Stability and No Violence
+      goef            float   %9.0g                 Government Effectiveness
+      requ            float   %9.0g                 Regularity Quality
+      rol             float   %9.0g                 Rule of Law
+      cc              float   %9.0g                 Control of corruption
+      outchi          float   %9.0g                 
+      epe             float   %9.0g                 
+      ese             float   %9.0g                 
+      tpe             float   %9.0g                 
+      tse             float   %9.0g                 
+      fdi             float   %9.0g                 Foreign direct investment, net inflows (BoP, current US$)
+      nod             float   %9.0g                 Net official development assistance received (current US$)
+      gne             float   %9.0g                 Gross national expenditure (current US$)
+      gnp             float   %9.0g                 GDP per capita (current US$)
+      infd            float   %9.0g                 Number of infant deaths
+      ufd             float   %9.0g                 Number of under-five deaths
+      neod            float   %9.0g                 Number of neonatal deaths
+      matd            float   %9.0g                 Number of maternal deaths
+      hec             float   %9.0g                 Health expenditure per capita (current US$)
+      into            float   %9.0g                 International tourism, number of arrivals
+      meimp           float   %9.0g                 Merchandise imports (current US$)
+      meexp           float   %9.0g                 Merchandise exports (current US$)
+      inve            float   %9.0g                 Investment in energy with private participation (current US$)
+      invt            float   %9.0g                 Investment in transport with private participation (current US$)
+      tr              float   %9.0g                 Tax revenue (current LCU)
+      me              float   %9.0g                 Military expenditure (current LCU)
+      brd             float   %9.0g                 Battle-related deaths (number of people)
+      afp             float   %9.0g                 Armed forces personnel, total
+      airt            float   %9.0g                 Air transport, registered carrier departures worldwide
+      rail            float   %9.0g                 Rail lines (total route-km)
+      mob             float   %9.0g                 Mobile cellular subscriptions
+      fts             float   %9.0g                 Fixed telephone subscriptions
+      fbs             float   %9.0g                 Fixed broadband subscriptions
+      ---------------------------------------------------------------------------------------------------------------------------------------------
+      Sorted by: year
+      
+    25 . br
+      
+    26 . clear
+      
+    27 . use pubsect
+      file pubsect.dta not found
+      r(601);
+      
+    28 . use pubsec
+      
+    29 . br
+      
+    30 . clear
+      
+    31 . use indiadata
+      
+    32 . clear
+      
+    33 . use govont
+      file govont.dta not found
+      r(601);
+      
+    34 . use indiadata
+      
+    35 . do "C:\Users\DURGA\AppData\Local\Temp\STD03000000.tmp"
+      
+    36 . use indiadata
+      
+    37 . 
+    38 . scatter voiacc polstb goef requ rol cc timeline
+      
+    39 . 
+    40 . save graph govont
+      invalid 'govont' 
+      r(198);
+      
+      end of do-file
+      
+      r(198);
+      
+    41 . do "C:\Users\DURGA\AppData\Local\Temp\STD03000000.tmp"
+      
+    42 . 
+    43 . use indiadata
+      
+    44 . 
+    45 . scatter outchi epe ese tpe tse
+      
+    46 . 
+    47 . save graph educont
+      invalid 'educont' 
+      r(198);
+      
+      end of do-file
+      
+      r(198);
+      
+    48 . do "C:\Users\DURGA\AppData\Local\Temp\STD03000000.tmp"
+      
+    49 . use indiadata
+      
+    50 . 
+    51 . scatter fdi nod gne gnp
+      
+    52 . 
+    53 . save graph econgont
+      invalid 'econgont' 
+      r(198);
+      
+      end of do-file
+      
+      r(198);
+      
+    54 . do "C:\Users\DURGA\AppData\Local\Temp\STD03000000.tmp"
+      
+    55 . use indiadata
+      
+    56 . 
+    57 . scatter infd ufd neod matd hec
+      
+    58 . 
+    59 . save graph healthont 
+      invalid 'healthont' 
+      r(198);
+      
+      end of do-file
+      
+      r(198);
+      
+    60 . do "C:\Users\DURGA\AppData\Local\Temp\STD03000000.tmp"
+      
+    61 . use indiadata
+      
+    62 . 
+    63 . scatter into meimp meexp inve invt
+      
+    64 . 
+    65 . save graph pvtsecont 
+      invalid 'pvtsecont' 
+      r(198);
+      
+      end of do-file
+      
+      r(198);
+      
+    66 . do "C:\Users\DURGA\AppData\Local\Temp\STD03000000.tmp"
+      
+    67 . use indiadata
+      
+    68 . 
+    69 . scatter tr me brd afp
+      
+    70 . 
+    71 . save graph pubsecont 
+      invalid 'pubsecont' 
+      r(198);
+      
+      end of do-file
+      
+      r(198);
+      
+    72 . do "C:\Users\DURGA\AppData\Local\Temp\STD03000000.tmp"
+      
+    73 . use indiadata
+      
+    74 . 
+    75 . scatter airt rail mob fts fbs
+      
+    76 . 
+    77 . save graph infraont 
+      invalid 'infraont' 
+      r(198);
+      
+      end of do-file
+      
+      r(198);
+      
+    78 . clear
+      
+    79 . webuse sp500, clear
+      (S&P 500)
+      
+    80 . br
+      
+    81 . twoway rcap high low date in 1/15
+      
+    82 . br
+      
+    83 . clear
+      
+    84 . webuse gnp96, clear
+      
+    85 . 
+    86 . twoway area d.gnp96 date
+      
+    87 . br
+      
+    88 . br
+      
+    89 . clear
+      
+    90 . use indiadata
+      
+    91 . clear
+      
+    92 . webuse gnp96
+      
+    93 . br
+      
+    94 . cleer
+      command cleer is unrecognized
+      r(199);
+      
+    95 . clear
+      
+    96 . use indiadata
+      
+    97 . twoway area d.voiacc timeline
+      time variable not set
+      r(111);
+      
+    98 . twoway area d.timeline date
+      variable date not found
+      r(111);
+      
+    99 . clear
+      
+   100 . webuse sp500, clear
+      (S&P 500)
+      
+   101 . br
+      
+   102 . describe
+      
+      Contains data from http://www.stata-press.com/data/r14/sp500.dta
+        obs:           248                          S&P 500
+       vars:             7                          22 Apr 2014 10:52
+       size:         7,440                          (_dta has notes)
+      ---------------------------------------------------------------------------------------------------------------------------------------------
+                    storage   display    value
+      variable name   type    format     label      variable label
+      ---------------------------------------------------------------------------------------------------------------------------------------------
+      date            int     %td                   Date
+      open            float   %9.0g                 Opening price
+      high            float   %9.0g                 High price
+      low             float   %9.0g                 Low price
+      close           float   %9.0g                 Closing price
+      volume          double  %12.0gc               Volume (thousands)
+      change          float   %9.0g                 Closing price change
+      ---------------------------------------------------------------------------------------------------------------------------------------------
+      Sorted by: date
+      
+   103 . histogram open, frequency normal
+      (bin=15, start=965.79999, width=27.195333)
+      
+   104 . clear
+      
+   105 . webuse citytemp
+      (City Temperature Data)
+      
+   106 . br
+      
+   107 . br
+      
+   108 . graph bar tempjan, over(region)
+      
+   109 . clear
+      
+   110 . clear
+      
+   111 . use indiadata
+      
+   112 . sum
+      
+          Variable |        Obs        Mean    Std. Dev.       Min        Max
+      -------------+---------------------------------------------------------
+              year |          0
+          timeline |         14    2007.429    4.309458       2000       2014
+            voiacc |         14    .3986708    .0481756   .2573515   .4501788
+            polstb |         14   -1.180876    .1546345  -1.526879  -.9612263
+              goef |         14   -.0758745     .089899  -.2043775   .1110038
+      -------------+---------------------------------------------------------
+              requ |         14   -.3461189    .0949736  -.4807437  -.1584429
+               rol |         14    .0353378    .1224872  -.1118955    .279676
+                cc |         14   -.4530712    .0835331  -.5727857  -.2966766
+            outchi |          9    1.32e+08    1.08e+07   1.14e+08   1.40e+08
+               epe |          4     3157436    516084.9    2832912    3918312
+      -------------+---------------------------------------------------------
+               ese |          9     5749358     7146002     508133   1.70e+07
+               tpe |         12    9.44e+07    1.49e+07   7.10e+07   1.19e+08
+               tse |          7     3175006    994621.8    2112548    4387444
+               fdi |         14    2.15e+10    1.38e+10   3.58e+09   4.34e+10
+               nod |         13    1.85e+09    7.51e+08   7.30e+08   3.23e+09
+      -------------+---------------------------------------------------------
+               gne |         14    1.28e+12    5.86e+11   4.81e+11   2.10e+12
+               gnp |         14    1015.729    405.4146   452.4136   1581.511
+              infd |         14     1378626    261194.2     985575    1828921
+               ufd |         14     1831660    388355.1    1260762    2513120
+              neod |         14    966617.9    163418.1     721743    1253657
+      -------------+---------------------------------------------------------
+              matd |         14    69214.29     17729.5      47000     104000
+               hec |         13    40.45539    14.86915   20.05425   61.40821
+              into |         14    9.51e+09    1.09e+10   3.90e+08   3.78e+10
+             meimp |         14    6.62e+09    7.22e+09   9.64e+07   2.25e+10
+             meexp |         13     4672769     1549159    2384000    6968000
+      -------------+---------------------------------------------------------
+              inve |         14    2.60e+11    1.65e+11   5.15e+10   4.90e+11
+              invt |         14    1.73e+11    1.04e+11   4.24e+10   3.17e+11
+                tr |         12    5.24e+12    2.74e+12   1.89e+12   1.08e+13
+                me |         13     2612471    176303.4    2372000    3047000
+               brd |         14    1.60e+12    8.26e+11   6.42e+11   3.05e+12
+      -------------+---------------------------------------------------------
+               afp |         13    1131.692    487.4068        395       1843
+              airt |         14    496060.8    192030.3     198426   720050.2
+              rail |         14    63721.93    817.0872      62759      65808
+               mob |         14    4.15e+08    3.80e+08    3577095   9.44e+08
+               fts |         14    3.73e+07     6584671   2.70e+07   5.02e+07
+      -------------+---------------------------------------------------------
+               fbs |         13     6942927     6274700      82409   1.57e+07
+      
+   113 . clear
+      
+   114 . describe
+      
+      Contains data
+        obs:             0                          
+       vars:             0                          
+       size:             0                          
+      Sorted by: 
+      
+   115 . use indiadata
+      
+   116 . describe
+      
+      Contains data from indiadata.dta
+        obs:            14                          
+       vars:            36                          12 Apr 2016 03:20
+       size:         2,142                          
+      ---------------------------------------------------------------------------------------------------------------------------------------------
+                    storage   display    value
+      variable name   type    format     label      variable label
+      ---------------------------------------------------------------------------------------------------------------------------------------------
+      year            str13   %13s                  
+      timeline        float   %9.0g                 
+      voiacc          float   %9.0g                 Voice and Accountability
+      polstb          float   %9.0g                 Political Stability and No Violence
+      goef            float   %9.0g                 Government Effectiveness
+      requ            float   %9.0g                 Regularity Quality
+      rol             float   %9.0g                 Rule of Law
+      cc              float   %9.0g                 Control of corruption
+      outchi          float   %9.0g                 
+      epe             float   %9.0g                 
+      ese             float   %9.0g                 
+      tpe             float   %9.0g                 
+      tse             float   %9.0g                 
+      fdi             float   %9.0g                 Foreign direct investment, net inflows (BoP, current US$)
+      nod             float   %9.0g                 Net official development assistance received (current US$)
+      gne             float   %9.0g                 Gross national expenditure (current US$)
+      gnp             float   %9.0g                 GDP per capita (current US$)
+      infd            float   %9.0g                 Number of infant deaths
+      ufd             float   %9.0g                 Number of under-five deaths
+      neod            float   %9.0g                 Number of neonatal deaths
+      matd            float   %9.0g                 Number of maternal deaths
+      hec             float   %9.0g                 Health expenditure per capita (current US$)
+      into            float   %9.0g                 International tourism, number of arrivals
+      meimp           float   %9.0g                 Merchandise imports (current US$)
+      meexp           float   %9.0g                 Merchandise exports (current US$)
+      inve            float   %9.0g                 Investment in energy with private participation (current US$)
+      invt            float   %9.0g                 Investment in transport with private participation (current US$)
+      tr              float   %9.0g                 Tax revenue (current LCU)
+      me              float   %9.0g                 Military expenditure (current LCU)
+      brd             float   %9.0g                 Battle-related deaths (number of people)
+      afp             float   %9.0g                 Armed forces personnel, total
+      airt            float   %9.0g                 Air transport, registered carrier departures worldwide
+      rail            float   %9.0g                 Rail lines (total route-km)
+      mob             float   %9.0g                 Mobile cellular subscriptions
+      fts             float   %9.0g                 Fixed telephone subscriptions
+      fbs             float   %9.0g                 Fixed broadband subscriptions
+      ---------------------------------------------------------------------------------------------------------------------------------------------
+      Sorted by: year
+      
+   117 . lear
+      command lear is unrecognized
+      r(199);
+      
+   118 . clear
+      
+   119 . clear
+      
+   120 . use indiadata
+      
+   121 . regress voiacc polstb
+      
+            Source |       SS           df       MS      Number of obs   =        14
+      -------------+----------------------------------   F(1, 12)        =      0.58
+             Model |  .001383022         1  .001383022   Prob > F        =    0.4623
+          Residual |  .028788581        12  .002399048   R-squared       =    0.0458
+      -------------+----------------------------------   Adj R-squared   =   -0.0337
+             Total |  .030171603        13  .002320893   Root MSE        =    .04898
+      
+      ------------------------------------------------------------------------------
+            voiacc |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+      -------------+----------------------------------------------------------------
+            polstb |  -.0667016   .0878499    -0.76   0.462    -.2581102    .1247069
+             _cons |   .3199044   .1045626     3.06   0.010     .0920822    .5477267
+      ------------------------------------------------------------------------------
+      
+   122 . outreg2 using myreg.doc
+      command outreg2 is unrecognized
+      r(199);
+      
+   123 . ssc install outreg2
+      checking outreg2 consistency and verifying not already installed...
+      installing into c:\ado\plus\...
+      installation complete.
+      
+   124 . clear
+      
+   125 . use indiadata
+      
+   126 . regress voiacc polstb
+      
+            Source |       SS           df       MS      Number of obs   =        14
+      -------------+----------------------------------   F(1, 12)        =      0.58
+             Model |  .001383022         1  .001383022   Prob > F        =    0.4623
+          Residual |  .028788581        12  .002399048   R-squared       =    0.0458
+      -------------+----------------------------------   Adj R-squared   =   -0.0337
+             Total |  .030171603        13  .002320893   Root MSE        =    .04898
+      
+      ------------------------------------------------------------------------------
+            voiacc |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+      -------------+----------------------------------------------------------------
+            polstb |  -.0667016   .0878499    -0.76   0.462    -.2581102    .1247069
+             _cons |   .3199044   .1045626     3.06   0.010     .0920822    .5477267
+      ------------------------------------------------------------------------------
+      
+   127 . outreg2 using myreg.doc
+      c:\ado\plus/o/outreg2.ado
+      myreg.doc
+      dir : seeout
+      
+   128 . regress polstb goef
+      
+            Source |       SS           df       MS      Number of obs   =        14
+      -------------+----------------------------------   F(1, 12)        =      0.65
+             Model |  .015986915         1  .015986915   Prob > F        =    0.4356
+          Residual |  .294866808        12  .024572234   R-squared       =    0.0514
+      -------------+----------------------------------   Adj R-squared   =   -0.0276
+             Total |  .310853723        13  .023911825   Root MSE        =    .15676
+      
+      ------------------------------------------------------------------------------
+            polstb |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+      -------------+----------------------------------------------------------------
+              goef |  -.3900821   .4836108    -0.81   0.436    -1.443779    .6636153
+             _cons |  -1.210473   .0556919   -21.74   0.000    -1.331816   -1.089131
+      ------------------------------------------------------------------------------
+      
+   129 . outreg2 using myreg.doc
+      myreg.doc
+      dir : seeout
+      
+   130 . seeout using "myreg.txt"
+      Hit Enter to continue. 
+      
+   131 . clear
+      
+   132 . use indiadata
+      
+   133 . describe
+      
+      Contains data from indiadata.dta
+        obs:            14                          
+       vars:            36                          12 Apr 2016 03:20
+       size:         2,142                          
+      ---------------------------------------------------------------------------------------------------------------------------------------------
+                    storage   display    value
+      variable name   type    format     label      variable label
+      ---------------------------------------------------------------------------------------------------------------------------------------------
+      year            str13   %13s                  
+      timeline        float   %9.0g                 
+      voiacc          float   %9.0g                 Voice and Accountability
+      polstb          float   %9.0g                 Political Stability and No Violence
+      goef            float   %9.0g                 Government Effectiveness
+      requ            float   %9.0g                 Regularity Quality
+      rol             float   %9.0g                 Rule of Law
+      cc              float   %9.0g                 Control of corruption
+      outchi          float   %9.0g                 
+      epe             float   %9.0g                 
+      ese             float   %9.0g                 
+      tpe             float   %9.0g                 
+      tse             float   %9.0g                 
+      fdi             float   %9.0g                 Foreign direct investment, net inflows (BoP, current US$)
+      nod             float   %9.0g                 Net official development assistance received (current US$)
+      gne             float   %9.0g                 Gross national expenditure (current US$)
+      gnp             float   %9.0g                 GDP per capita (current US$)
+      infd            float   %9.0g                 Number of infant deaths
+      ufd             float   %9.0g                 Number of under-five deaths
+      neod            float   %9.0g                 Number of neonatal deaths
+      --Break--
+      r(1);
+      
+   134 . outreg2 using myreg.doc
+      myreg.doc
+      dir : seeout
+      
+   135 . outreg2 using newtry.doc
+      newtry.doc
+      dir : seeout
+      
+   136 . clear
+      
+   137 . sysuse auto, clear
+      (1978 Automobile Data)
+      
+   138 . br
+      
+   139 . tabstat price length weight, stats(`statistics') save
+      
+         stats |     price    length    weight
+      ---------+------------------------------
+          mean |  6165.257  187.9324  3019.459
+      ----------------------------------------
+      
+   140 . drop _all
+      
+   141 . mat dummy=r(StatTotal)
+      
+   142 . svmat dummy, names(col)
+      number of observations will be reset to 1
+      Press any key to continue, or Break to abort
+      --Break--
+      r(1);
+      
+   143 . expose, clear varname
+      command expose is unrecognized
+      r(199);
+      
+   144 . tokenize `statistics'
+      
+   145 . clear
+      
+   146 . clear
+      
+   147 . use indiadata
+      
+   148 . sum
+      
+          Variable |        Obs        Mean    Std. Dev.       Min        Max
+      -------------+---------------------------------------------------------
+              year |          0
+          timeline |         14    2007.429    4.309458       2000       2014
+            voiacc |         14    .3986708    .0481756   .2573515   .4501788
+            polstb |         14   -1.180876    .1546345  -1.526879  -.9612263
+              goef |         14   -.0758745     .089899  -.2043775   .1110038
+      -------------+---------------------------------------------------------
+              requ |         14   -.3461189    .0949736  -.4807437  -.1584429
+               rol |         14    .0353378    .1224872  -.1118955    .279676
+                cc |         14   -.4530712    .0835331  -.5727857  -.2966766
+            outchi |          9    1.32e+08    1.08e+07   1.14e+08   1.40e+08
+               epe |          4     3157436    516084.9    2832912    3918312
+      -------------+---------------------------------------------------------
+               ese |          9     5749358     7146002     508133   1.70e+07
+               tpe |         12    9.44e+07    1.49e+07   7.10e+07   1.19e+08
+               tse |          7     3175006    994621.8    2112548    4387444
+               fdi |         14    2.15e+10    1.38e+10   3.58e+09   4.34e+10
+               nod |         13    1.85e+09    7.51e+08   7.30e+08   3.23e+09
+      -------------+---------------------------------------------------------
+               gne |         14    1.28e+12    5.86e+11   4.81e+11   2.10e+12
+               gnp |         14    1015.729    405.4146   452.4136   1581.511
+              infd |         14     1378626    261194.2     985575    1828921
+               ufd |         14     1831660    388355.1    1260762    2513120
+              neod |         14    966617.9    163418.1     721743    1253657
+      -------------+---------------------------------------------------------
+              matd |         14    69214.29     17729.5      47000     104000
+               hec |         13    40.45539    14.86915   20.05425   61.40821
+      --Break--
+      r(1);
+      
+   149 . translate @Results trial.txt

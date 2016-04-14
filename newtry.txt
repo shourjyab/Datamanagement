@@ -1,0 +1,12 @@
+	(1)
+VARIABLES	polstb
+	
+goef	-0.390
+	(0.484)
+Constant	-1.210***
+	(0.0557)
+	
+Observations	14
+R-squared	0.051
+Standard errors in parentheses	
+*** p<0.01, ** p<0.05, * p<0.1	
